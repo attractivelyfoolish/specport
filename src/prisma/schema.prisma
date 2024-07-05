@@ -49,10 +49,11 @@ model Supplier {
 }
 
 model BaseLog {
-  id      String @id
-  address String
-  data    String
-  topics  String
+  id               String @id
+  address          String
+  data             String
+  topics           String
+  transaction_hash String
 
   @@map("base_logs")
 }

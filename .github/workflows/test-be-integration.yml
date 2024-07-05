@@ -21,7 +21,7 @@ jobs:
           - 5432:5432
 
     env:
-      DATABASE_URL: postgresql://walter:white@localhost:5432/boilerplate
+      DATABASE_URL: postgresql://walter:white@localhost:5432/specport
 
     steps:
       - name: Checkout 🛎️

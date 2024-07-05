@@ -1,7 +1,7 @@
 {
-  "name": "prisma-next-typescript",
-  "description": "Minimal RESTful API boilerplate with Prisma, Next.js and TypeScript",
-  "version": "0.0.0-development",
+  "name": "specport",
+  "description": "Specport",
+  "version": "0.0.0",
   "scripts": {
     "dev": "env-cmd -f envs/dev.env next dev",
     "build": "next build",

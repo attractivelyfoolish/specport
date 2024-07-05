@@ -1,0 +1,29 @@
+node_modules
+coverage
+dist
+storybook-static
+compiled
+
+.rpt2_cache
+
+npm-debug.log*
+
+.DS_Store
+*.log
+.vscode
+.idea
+
+/.next/
+/out/
+/envs
+.vercel
+
+/build
+
+*.tsbuildinfo
+
+database/*
+!database/.gitkeep 
+
+# keep folder with *.env files in Git ONLY for demo purposes
+# envs/

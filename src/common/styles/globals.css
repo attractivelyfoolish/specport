@@ -1,0 +1,28 @@
+html,
+body {
+  padding: 0;
+  margin: 5px 10px 0 10px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue-sky-400: #64b0ce;
+  --color-blue-sky-500: #3d9cc2;
+}
+
+h1,
+h2 {
+  margin: 15px 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+}

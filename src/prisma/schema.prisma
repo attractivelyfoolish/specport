@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  email     String   @unique
+  name      String
+  username  String   @unique
+  imageUrl  String?
+  role      Role     @default(STANDARD)
+  batches   Batch[]
+}
+
+enum Role {
+  STANDARD
+  APPRENTICE
+  SUPERVISOR
+  ADMINISTRATOR
+}
+
+model Batch {
+  id          String   @id @default(uuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       String
+  description String?
+  purity      Decimal  @db.Decimal(5, 2)
+  weight      Decimal  @db.Decimal(10, 2)
+  users       User[]
+  supplier    Supplier @relation(fields: [supplierId], references: [id])
+  supplierId  String
+}
+
+model Supplier {
+  id          String   @id @default(uuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String
+  description String?
+  batches     Batch[]
+}
+
+model BaseLog {
+  id      String @id
+  address String
+  data    String
+  topics  String
+
+  @@map("base_logs")
+}
